@@ -50,6 +50,28 @@ channels_info = [
   "GitHub: https://github.com/metakgp",
   "Wiki: https://wiki.metakgp.org"
 ].join('\n')
+complete_information = [
+  "Hello, welcome to Metakgp! You probably want to know what Metakgp is and what happens here. Read on.",
+  "",
+  "*What is Metakgp?*",
+  "",
+  "Metakgp is a loose association of engineers, hackers, artists, and students from IIT Kharagpur. We collaborate on a lot of technical and non-technical projects.",
+  "",
+  "*Who's the leader?*",
+  "",
+  "There is no heirarchy here. But we have three maintainers Naresh (@ghostwriternr), Nishant (@nishnik), Ayush (@defcon) who help administer some day to day issues.",
+  "",
+  "*How do I get involved?*",
+  "",
+  "You can join any channel and ask a question there. If you are interested in writing code, go to https://github.com/metakgp and send a pull request to any project"m
+  "We try to maintain up-to-date helpful READMEs for all our projects!",
+  "",
+  "*Where do I learn more?*",
+  "",
+  "You can visit https://wiki.metakgp.org/w/Metakgp:About to learn more about Metakgp and it's history",
+  "You can also visit https://metakgp.github.io/ to know more about the projects that we have worked on",
+].join('\n');
+
 googleGroupInvite = "We also have a google group where we post all the latest announcements. You can join it by going to https://goo.gl/Uk4Lfl ."
 channel_descriptions = JSON.parse require("fs").readFileSync("channel_long_descriptions.json")
 sorry_no_information = "Ooops! It seems we don't know anything more about this channel! Sorry, you are a pioneer!"
@@ -74,7 +96,7 @@ plugin = (robot) ->
   robot.enter (msg) ->
     if msg.message.room == "general"
       robot.send {room: msg.message.user.name}, googleGroupInvite
-      robot.send {room: msg.message.user.name}, channels_info
+      robot.send {room: msg.message.user.name}, complete_information
       randNum = Math.floor(Math.random() * 10)
       msg.send welcome_message_1[randNum % (welcome_message_1.length-1)] + \
         '@' + msg.message.user.name + welcome_message_2[randNum % \
