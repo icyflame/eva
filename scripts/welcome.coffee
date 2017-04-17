@@ -84,7 +84,7 @@ plugin = (robot) ->
     msg.send "Things are good, @#{msg.message.user.name}! What about you?"
 
   robot.respond /(send the )?joining message( to me)?/i, (msg) ->
-    robot.send {room: msg.message.user.name}, channels_info
+    robot.send {room: msg.message.user.name}, complete_information
 
   robot.respond /(tell me )?more about \#?([a-z-]+)/, (msg) ->
     channel_name = msg.match[2]
@@ -95,8 +95,8 @@ plugin = (robot) ->
 
   robot.enter (msg) ->
     if msg.message.room == "general"
-      robot.send {room: msg.message.user.name}, googleGroupInvite
       robot.send {room: msg.message.user.name}, complete_information
+      robot.send {room: msg.message.user.name}, googleGroupInvite
       randNum = Math.floor(Math.random() * 10)
       msg.send welcome_message_1[randNum % (welcome_message_1.length-1)] + \
         '@' + msg.message.user.name + welcome_message_2[randNum % \
