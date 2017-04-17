@@ -63,13 +63,13 @@ complete_information = [
   "",
   "*How do I get involved?*",
   "",
-  "You can join any channel and ask a question there. If you are interested in writing code, go to https://github.com/metakgp and send a pull request to any project"m
+  "You can join any channel and ask a question there. If you are interested in writing code, go to https://github.com/metakgp and send a pull request to any project",
   "We try to maintain up-to-date helpful READMEs for all our projects!",
   "",
   "*Where do I learn more?*",
   "",
   "You can visit https://wiki.metakgp.org/w/Metakgp:About to learn more about Metakgp and it's history",
-  "You can also visit https://metakgp.github.io/ to know more about the projects that we have worked on",
+  "You can also visit https://metakgp.github.io/ to know more about the projects that we have worked on"
 ].join('\n');
 
 googleGroupInvite = "We also have a google group where we post all the latest announcements. You can join it by going to https://goo.gl/Uk4Lfl ."
